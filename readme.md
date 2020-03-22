@@ -8,6 +8,7 @@
 8. also check from phpadmin site as well by going into xxx.xxx.xxx.xxx:8080 where xxx.xxx.xxx.xxx is from your vm's ip address you can check it from your host OS for this
 
 output commands as below
+
 sam@loadlugui:~$ cd /home/sam/Documents/CNA350-master/maxscale
 
 sam@loadlugui:~/Documents/CNA350-master/maxscale$ docker-compose up -d
