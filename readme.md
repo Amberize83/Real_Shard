@@ -1,16 +1,17 @@
+# Real World Sharding
+## Installation Steps
 1. On docker VM go to this website https://github.com/gustanik/CNA350
 2. download into zip file
 3. Extact the file to where your comfortable to work with
-4. cd into the folder "cd /home/sam/Documents/CNA350-master/maxscale"
-5. Run this command docker-compose up -d
-6. run this mysql -u maxuser -pmaxpwd -h 127.0.0.1 -P 3306 -e "SELECT *  FROM zipcodes_two.zipcodes_two LIMIT 50;"
-7. also this mysql -u maxuser -pmaxpwd -h 127.0.0.1 -P 3306 -e "SELECT *  FROM zipcodes_one.zipcodes_one LIMIT 50;"
+4. cd into the folder ```"cd /home/sam/Documents/CNA350-master/maxscale"```
+5. Run this command ```docker-compose up -d```
+6. run this ```mysql -u maxuser -pmaxpwd -h 127.0.0.1 -P 3306 -e "SELECT *  FROM zipcodes_two.zipcodes_two LIMIT 50;"```
+7. also this ```mysql -u maxuser -pmaxpwd -h 127.0.0.1 -P 3306 -e "SELECT *  FROM zipcodes_one.zipcodes_one LIMIT 50;"```
 8. also check from phpadmin site as well by going into xxx.xxx.xxx.xxx:8080 where xxx.xxx.xxx.xxx is from your vm's ip address you can check it from your host OS for this
 
 output commands as below
-
+```
 sam@loadlugui:~$ cd /home/sam/Documents/CNA350-master/maxscale
-
 sam@loadlugui:~/Documents/CNA350-master/maxscale$ docker-compose up -d
 Creating network "maxscale_default" with the default driver
 Pulling master (mariadb:latest)...
@@ -72,7 +73,9 @@ Creating maxscale_slave1_1  ... done
 Creating maxscale_slave2_1  ... done
 Creating maxscale_maxscale_1 ... done
 Creating phpmyadmin          ... done
-
+```
+Zipcode block
+```
 sam@loadlugui:~/Documents/CNA350-master/maxscale$ mysql -u maxuser -pmaxpwd -h 127.0.0.1 -P 3306 -e "SELECT *  FROM zipcodes_two.zipcodes_two LIMIT 50;"
 Command 'mysql' not found, but can be installed with:
 sudo apt install mysql-client-core-5.7
@@ -226,3 +229,4 @@ sam@loadlugui:~/Documents/CNA350-master/maxscale$ mysql -u maxuser -pmaxpwd -h 1
 |   10002 | STANDARD    | NEW YORK           | NY    | PRIMARY      | 40.71     | -73.99     | NA-US-NY-NEW YORK           | FALSE         | 45236           | 70604               | 1394042364 |
 |   10003 | STANDARD    | NEW YORK           | NY    | PRIMARY      | 40.71     | -73.99     | NA-US-NY-NEW YORK           | FALSE         | 28817           | 36569               |            |
 +---------+-------------+--------------------+-------+--------------+-----------+------------+-----------------------------+---------------+-----------------+---------------------+------------+
+```
